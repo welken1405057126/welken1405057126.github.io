@@ -1,0 +1,107 @@
+# Hexo Configuration
+## Docs: https://hexo.io/docs/configuration.html
+## Source: https://github.com/hexojs/hexo/
+
+# Site
+title: welken's home                 # 博客的标题
+subtitle: ''                         # 博客的副标题（如果有）
+description: '记录 welken 的学习与实践：算法与 ACM 题解、项目笔记与杂谈'                      # 网站描述（可用于 SEO 优化）
+keywords: blog                # 用逗号分隔的关键词（用于 SEO）
+author: welken          # 博客作者名称
+language: zh-CN              # 博客语言设置，默认是英文（`en`）
+timezone: Shanghai              # 设置时区，留空默认为服务器的时区
+
+
+# URL
+## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
+url: https://welken1405057126.github.io/
+permalink: :year/:month/:day/:title/            # 文章 URL 的结构，例如：2024/12/19/hello-world/
+permalink_defaults:                             # 文章 URL 的默认值 
+pretty_urls:
+  trailing_index: true # Set to false to remove trailing 'index.html' from permalinks， 设置是否去掉 URL 末尾的 index.html
+  trailing_html: false # Set to false to remove trailing '.html' from permalinks
+
+# Directory
+source_dir: source              # 存放源文件的文件夹，默认是 'source'
+public_dir: public              # 存放生成文件的文件夹，默认是 'public'
+tag_dir: tags                   # 存放标签文件夹，默认是 'tags'
+archive_dir: archives           # 存放归档文件夹，默认是 'archives'
+category_dir: categories        # 存放分类文件夹，默认是 'categories'
+code_dir: downloads/code        # 存放代码文件夹，默认是 'downloads/code'
+i18n_dir: :lang                 # 国际化语言存放目录
+skip_render:
+
+# Writing
+new_post_name: :title.md        # File name of new posts， 新建文章的文件命名格式
+default_layout: post            # 默认布局为 `post`，可以是 `page`、`post` 等 
+titlecase: false                # 是否将文章标题首字母大写
+external_link:
+  enable: true                  # Open external links in new tab， 是否允许外部链接在新标签页打开  
+  field: site                   # Apply to the whole site
+  exclude: ''
+filename_case: 0                # 文章文件的命名规则，0 表示不改变，1 表示全部大写，2 表示全部小写
+render_drafts: false            # 是否渲染草稿
+post_asset_folder: true         # 是否为每篇文章创建专用的资源文件夹
+relative_link: false            # 是否启用相对链接
+future: true                    # 是否显示未来的文章
+syntax_highlighter: highlight.js     # 默认的代码高亮插件
+highlight:
+  line_number: true              # 代码块显示行号 
+  auto_detect: false             # 是否自动检测高亮主题
+  tab_replace: ''
+  wrap: true
+  hljs: false
+prismjs:
+  preprocess: true               # 是否使用 PrismJS 进行预处理
+  line_number: true              # 是否显示代码行号
+  tab_replace: ''
+
+# Home page setting
+# path: Root path for your blogs index page. (default = '')
+# per_page: Posts displayed per page. (0 = disable pagination)
+# order_by: Posts order. (Order by date descending by default)
+index_generator:
+  path: ''
+  per_page: 10                   # 每页显示的文章数
+  order_by: -date                # 文章排序方式，-date 表示按时间倒序排序（最新的文章排在最前面）
+
+# Category & Tag
+default_category: uncategorized    # 默认分类名称
+category_map:
+tag_map:
+
+# Metadata elements
+## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
+meta_generator: true
+
+# Date / Time format
+## Hexo uses Moment.js to parse and display date
+## You can customize the date format as defined in
+## http://momentjs.com/docs/#/displaying/format/
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+## updated_option supports 'mtime', 'date', 'empty'
+updated_option: 'mtime'
+
+# Pagination
+## Set per_page to 0 to disable pagination
+per_page: 10
+pagination_dir: page
+
+# Include / Exclude file(s)
+## include:/exclude: options only apply to the 'source/' folder
+include:
+exclude:
+ignore:
+
+# Extensions
+## Plugins: https://hexo.io/plugins/
+## Themes: https://hexo.io/themes/
+theme: redefine
+
+# Deployment
+## Docs: https://hexo.io/docs/one-command-deployment
+deploy:
+  type: git
+  repository: https://github.com/welken1405057126/welken1405057126.github.io.git
+  branch: main
